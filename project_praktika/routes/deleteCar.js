@@ -6,6 +6,7 @@ const path =require('path')
 const fs = require('fs').promises
 const Booking = require('../models/bid.model');
 const User = require('../models/user.models')
+const Comment = require('../models/comment.model')
 router.delete('/admin/deleteCar/:id', async (req, res) => {
     try {
         const id = req.params.id;
@@ -102,5 +103,41 @@ router.delete('/users/:id', async(req,res)=>{
         res.status(500).json({message:'Ошибка сервера'})
     }
 })
+router.post('/createComment',async(req,res)=>{
+    try {
+        const {carId,userId, content} = req.body;
+        if(!carId||!content||!userId){
+            return res.status(401).json({message:'Не переданы параметры'})
+        }
+        const createComment = await Comment.create({
+            userId,
+            carId,
+            content
+        });
+        if(createComment){
+            return res.status(200).json({message:'Отзыв успешно создан'})
+        }else{
+            return res.status(400).json({message:'ошибка при создании отзыва'})
 
+        }
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({message:'ошибка сервера'})
+    }
+})
+router.get('/comments/:id', async(req,res)=>{
+    try {
+        const carId = req.params.id;
+        const comments=  await Comment.find({
+            carId
+        }).populate('userId');
+        if(!comments){
+            return res.status(404).json({message:"Отзывов пока нет"})
+        }
+        return res.status(200).json(comments);
+    } catch (error) {
+        console.error(error);
+        return res.status(500).json({message:'ошибка сервера'})
+    }
+})
 module.exports = router;

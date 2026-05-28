@@ -596,7 +596,9 @@ footer{
   align-items: center;
   gap: 10px;
 }
-
+.p_privacy{
+  color: #272626;
+}
 .policy-section h2::before {
   content: '';
   width: 6px;
@@ -614,6 +616,7 @@ footer{
   position: relative;
   padding: 8px 0 8px 25px;
   margin-bottom: 8px;
+  text-align: start;
 }
 
 .policy-list li::before {
@@ -721,4 +724,248 @@ footer{
   .policy-list li {
     font-size: 0.95rem;
   }
+}
+.pBid{
+  width: 40vw;
+  
+}
+.comments-block {
+  padding: 3vw 5vw;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Заголовок */
+.comments-title-block {
+  text-align: left;
+  margin-bottom: 2vw;
+}
+
+.comments-title-block h2 {
+  font-family: 'Anticva';
+  font-size: 2.5vw;
+  color: white;
+  margin-bottom: 0.8vw;
+}
+
+.comments-divider {
+  height: 2px;
+  background-color: #9FB902;
+  width: 100%;
+}
+
+/* Загрузка */
+.comments-loading {
+  text-align: center;
+  padding: 5vw;
+}
+
+.comments-loading p {
+  font-family: 'Platypi';
+  font-size: 1.5vw;
+  color: #9FB902;
+}
+
+/* Форма */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  margin-bottom: 3vw;
+}
+
+.comment-textarea {
+  background-color: #272626;
+  border: 1px solid #9FB902;
+  color: white;
+  padding: 1vw;
+  font-family: 'Platypi';
+  font-size: 1.2vw;
+  resize: vertical;
+  border-radius: 4px;
+}
+
+.comment-textarea:focus {
+  outline: none;
+  border-color: #b8d602;
+  box-shadow: 0 0 10px rgba(159, 185, 2, 0.2);
+}
+
+.comment-textarea::placeholder {
+  color: #888;
+  font-family: 'Platypi';
+}
+
+/* Кнопка */
+.comment-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.3vw;
+  font-family: 'Platypi';
+  cursor: pointer;
+  padding: 1vw 2vw;
+  align-self: flex-start;
+}
+
+.comment-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3D3D3D;
+  transform: skewX(-40deg);
+  border: 2px solid #9FB902;
+  z-index: -1;
+}
+
+.comment-btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.comment-btn:hover::before {
+  background-color: #4a4a4a;
+}
+
+/* Нет комментариев */
+.no-comments {
+  font-family: 'Platypi';
+  font-size: 1.3vw;
+  color: #888;
+  text-align: center;
+  padding: 2vw;
+}
+
+/* Список */
+.comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+}
+
+/* Карточка комментария */
+.comment-card {
+  display: flex;
+  gap: 1.5vw;
+  background-color: #272626;
+  border: 1px solid #9FB902;
+  padding: 1.5vw;
+  border-radius: 6px;
+}
+
+.comment-avatar {
+  width: 3.5vw;
+  height: 3.5vw;
+  min-width: 45px;
+  min-height: 45px;
+  border-radius: 50%;
+  background-color: #9FB902;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Anticva';
+  font-size: 1.6vw;
+  color: #3D3D3D;
+  font-weight: bold;
+}
+
+.comment-content {
+  flex: 1;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8vw;
+}
+
+.comment-username {
+  font-family: 'Anticva';
+  font-size: 1.4vw;
+  color: #9FB902;
+  font-weight: bold;
+}
+
+.comment-date {
+  font-family: 'Platypi';
+  font-size: 1vw;
+  color: #888;
+}
+
+.comment-text {
+  font-family: 'Platypi';
+  font-size: 1.2vw;
+  color: white;
+  line-height: 1.6;
+  margin-bottom: 0.8vw;
+}
+
+.comment-delete-btn {
+  background: none;
+  border: none;
+  color: #ff4444;
+  font-family: 'Platypi';
+  font-size: 1vw;
+  cursor: pointer;
+  padding: 0;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.comment-delete-btn:hover {
+  opacity: 1;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .comments-title-block h2 {
+    font-size: 5vw;
+  }
+
+  .comment-textarea {
+    font-size: 2.5vw;
+    padding: 2vw;
+  }
+
+  .comment-btn {
+    font-size: 2.5vw;
+    padding: 2vw 4vw;
+  }
+
+  .comment-avatar {
+    width: 8vw;
+    height: 8vw;
+    font-size: 3vw;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .comment-username {
+    font-size: 3vw;
+  }
+
+  .comment-text {
+    font-size: 2.3vw;
+  }
+
+  .comment-date {
+    font-size: 2vw;
+  }
+
+  .comment-delete-btn {
+    font-size: 2vw;
+  }
+}
+.auth-warning {
+  font-family: 'Platypi';
+  font-size: 1.3vw;
+  color: #9FB902;
+  text-align: center;
+  padding: 2vw;
+  margin-bottom: 2vw;
 }

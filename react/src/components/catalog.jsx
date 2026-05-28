@@ -2,6 +2,8 @@ import './MainPage.css'
 
 import {Link} from 'react-router-dom';
 import { jwtDecode } from "jwt-decode";
+import Header from './module/Header';
+import Footer from './module/Footer';
 const Catalog = () => {
     const token = localStorage.getItem('token');//получаем данные из localStorage   
     console.log('Token:', token); // Вывод токена в консоль
@@ -19,25 +21,8 @@ const Catalog = () => {
         <>
 
         <div className="block_one_main">    
-        <header className='header'>
-                <div className='header_div'>
-                    <div className="div_top_header">
-                <Link to='/'><img src="/image/logo.png" alt=""  className='logo'/></Link>
-                {role==='admin'? <Link to='/adminPanel'>Админ панель</Link> :<Link to='/catalog'>Каталог</Link>}
-                    {token? <button onClick={handleLogout} className='button_log_out'>Выйти</button> : <Link to='/register'>Аккаунт</Link>  }
-                    
-                    {role==='admin'? <Link to='/bid'>Заявки</Link> : <Link to={`/booking`}>Бронирование</Link>}  
-                    </div>
-                    <div className='right_div'>
-                        
-                    <div className='geo_div'>
-                        <img src="/image/map.png" alt="" className='map_geo'/>
-                        <p>г.Астрахань</p>
-                    </div>
-                    </div>
-                    </div>
-            </header>
-
+        
+        <Header/>
 
         <div className="div_block_one_block">
             <hr className='hr_one'/>
@@ -96,37 +81,7 @@ const Catalog = () => {
             </div>
            </div>
         </div>
-        <footer>
-            <div className="div_footer_left">
-                <div className="div_pol">
-                     <div className="div_docs">
-            <h1 className='title_footer'>Документация</h1>
-            <Link to={'/politika'} className='p_footer'>Политика конфиденциальности</Link>
-            <Link to={'/rules'} className='p_footer'>Правила</Link>
-            <Link to={'/map_sait'} className='p_footer'>Карта сайта</Link>
-            </div>
-            <div className="div_user">
-            <h1 className='title_footer'>Пользователю</h1>
-            <Link to={'/auth'} className='p_footer'>Регистрация</Link>
-            <Link to={'/booking'} className='p_footer'>Бронирования автомобиля</Link>
-            </div>
-                </div>
-           
-            <div className="div_contacts">
-                <h1 className='title_footer'>Контакты</h1>
-                <p className='p_footer'>Телефон: +7 (912) 123-45-67</p>
-                <p className='p_footer'>Email:  drivego@yandex.com</p>
-                <p className='p_footer'>Адрес: г. Астрахань, ул. Пролетарская, д. 12</p>
-            </div>
-            <hr className='hr_footer'/>
-            <p className='p_footer'>(с) 2012-2026 “Драйв гоу!” - аренда автомобилей в Астрахани</p>
-            </div>
-            <div className="div_footer_right">
-<div ><a href="https://yandex.ru/maps/org/drive_elit/31595452529/?utm_medium=mapframe&utm_source=maps" >Drive elit</a><a href="https://yandex.ru/maps/37/astrahan/category/electric_transport_store/66350561707/?utm_medium=mapframe&utm_source=maps" >Магазин электротранспорта в Астрахани</a>
-            <iframe className="map"></iframe></div>
-            <hr className='hr_footer1'/>
-            </div>
-        </footer>
+        <Footer/>
         </>
     );
 }

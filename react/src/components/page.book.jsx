@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import './MainPage.css';
+import Header from "./module/Header";
+import Footer from "./module/Footer";
 
 const PageBook = () => {
     const [bookings, setBookings] = useState([]); // состояние для хранения массива заявок
@@ -54,21 +56,7 @@ const PageBook = () => {
 
     return (
         <>
-             <header className='header'>
-                <div className='header_div'>
-                <Link to='/'><img src="/image/logo.png" alt=""  className='logo'/></Link> 
-                    <div className='right_div'>
-                        {role==='admin'? <Link to='/adminPanel'>Админ панель</Link> : ''}
-                    {token? <button onClick={handleLogout} className='button_log_out'>Выйти</button> : <Link to='/register'>Аккаунт</Link>  }
-                    
-                    {role==='admin'? <Link to='/bid'>Заявки</Link> : <Link to={`/booking`}>Бронирование</Link>} 
-                    <div className='geo_div'>
-                        <img src="/image/map.png" alt="" className='map_geo'/>
-                        <p>г.Астрахань</p>
-                    </div>
-                    </div>
-                    </div>
-            </header>
+             <Header/>
 
             <div className="bookings">
                 <div className="div_top_booking">
@@ -96,37 +84,7 @@ const PageBook = () => {
                 <p className="p_bottom_prodol">Хотите создать новую заявку?</p>
                 <Link to={'/catalog'}> <img src="/image/prodol.png" alt="" className="button_prodol"/></Link>
             </div>
-            <footer>
-            <div className="div_footer_left">
-                <div className="div_pol">
-                     <div className="div_docs">
-            <h1 className='title_footer'>Документация</h1>
-            <p className='p_footer'>Политика конфиденциальности</p>
-            <p className='p_footer'>Правила</p>
-            <p className='p_footer'>Карта сайта</p>
-            </div>
-            <div className="div_user">
-            <h1 className='title_footer'>Пользователю</h1>
-            <p className='p_footer'>Регистрация</p>
-            <p className='p_footer'>Бронирования автомобиля</p>
-            </div>
-                </div>
-           
-            <div className="div_contacts">
-                <h1 className='title_footer'>Контакты</h1>
-                <p className='p_footer'>Телефон: +7 (912) 123-45-67</p>
-                <p className='p_footer'>Email:  info@example.com</p>
-                <p className='p_footer'>Адрес: г. Астрахань, ул. Пролетарская, д. 12</p>
-            </div>
-            <hr className='hr_footer'/>
-            <p className='p_footer'>Информация на данном сайте носит исключительно ознакомительный<br /> характер и не является публичной офертой, определяемой положениями<br /> Статьи 437 Гражданского кодекса РФ.</p>
-            <p className='p_footer'>(с) 2024 “Эх, прокачу!” - аренда автомобилей в Астрахани</p>
-            </div>
-            <div className="div_footer_right">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.320948643475!2d37.97386897679403!3d55.943808977263146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b52cf1c0fd7d7d%3A0x90753708ca0e7d9!2z0K3RhSwg0J_RgNC-0LrQsNGH0YM!5e0!3m2!1sru!2sru!4v1729022984790!5m2!1sru!2sru" className='map' allowfullscreen="" loading="lazy"></iframe>
-            <hr className='hr_footer1'/>
-            </div>
-        </footer>
+            <Footer/>
         </>
     );
 };

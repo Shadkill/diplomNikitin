@@ -85,7 +85,7 @@ const PrivacyPolicy = () => {
 
         <section className="policy-section">
           <h2>5. Порядок и сроки обработки</h2>
-          <p>
+          <p className='p_privacy'>
             Персональные данные обрабатываются в течение срока действия договора аренды и после его завершения — в течение сроков, установленных законодательством (в т. ч. для бухгалтерского и налогового учёта). Данные, используемые для маркетинговых рассылок, обрабатываются до момента отзыва согласия пользователем.
           </p>
         </section>
@@ -124,8 +124,8 @@ const PrivacyPolicy = () => {
           </ul>
           <div className="contact-info">
             <h3>Для реализации своих прав пользователь может обратиться в службу поддержки:</h3>
-            <p>E‑mail: <a href="mailto:privacy@autodrivego.ru">privacy@autodrivego.ru</a></p>
-            <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+            <p className='p_privacy'>E‑mail: <a href="mailto:privacy@autodrivego.ru">privacy@autodrivego.ru</a></p>
+            <p className='p_privacy'>Телефон: +7 (XXX) XXX-XX-XX</p>
           </div>
         </section>
 
@@ -146,7 +146,7 @@ const PrivacyPolicy = () => {
 
         <section className="policy-section">
           <h2>10. Изменения в Политике конфиденциальности</h2>
-          <p>
+          <p className='p_privacy'>
             Оператор вправе вносить изменения в настоящую Политику. Актуальная версия всегда доступна по адресу: <a href="/privacy">autodrivego.ru/privacy</a>. О существенных изменениях пользователь будет уведомлен через e‑mail или баннер на сайте.
           </p>
         </section>

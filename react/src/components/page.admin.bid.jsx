@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { jwtDecode } from "jwt-decode";
 import './MainPage.css';
+import Header from "./module/Header";
+import Footer from "./module/Footer";
 
 const AdminBookings = () => {
     const [bookings, setBookings] = useState([]);
@@ -76,21 +78,7 @@ const AdminBookings = () => {
     
     return (
         <>
-           <header className='header'>
-                <div className='header_div'>
-                <Link to='/'><img src="/image/logo.png" alt=""  className='logo'/></Link> 
-                    <div className='right_div'>
-                        {role==='admin'? <Link to='/adminPanel'>Админ панель</Link> : ''}
-                    {token? <button onClick={handleLogout} className='button_log_out'>Выйти</button> : <Link to='/register'>Аккаунт</Link>  }
-                    
-                    {role==='admin'? <Link to='/bid'>Заявки</Link> : <Link to={`/booking`}>Бронирование</Link>} 
-                    <div className='geo_div'>
-                        <img src="/image/map.png" alt="" className='map_geo'/>
-                        <p>г.Астрахань</p>
-                    </div>
-                    </div>
-                    </div>
-            </header>
+          <Header/>
 
             <div className="bookings1">
             <div className="div_top_booking">
@@ -113,38 +101,7 @@ const AdminBookings = () => {
                 ))}
                 <hr className="hr_booking"/>
             </div>
-            <footer>
-            <div className="div_footer_left">
-                <div className="div_pol">
-                     <div className="div_docs">
-            <h1 className='title_footer'>Документация</h1>
-            <p className='p_footer'>Политика конфиденциальности</p>
-            <p className='p_footer'>Правила</p>
-            <p className='p_footer'>Карта сайта</p>
-            </div>
-            <div className="div_user">
-            <h1 className='title_footer'>Пользователю</h1>
-            <p className='p_footer'>Регистрация</p>
-            <p className='p_footer'>Бронирования автомобиля</p>
-            </div>
-                </div>
-           
-            <div className="div_contacts">
-                <h1 className='title_footer'>Контакты</h1>
-                <p className='p_footer'>Телефон: +7 (912) 123-45-67</p>
-                <p className='p_footer'>Email:  info@example.com</p>
-                <p className='p_footer'>Адрес: г. Астрахань, ул. Пролетарская, д. 12</p>
-            </div>
-            <hr className='hr_footer'/>
-            <p className='p_footer'>Информация на данном сайте носит исключительно ознакомительный<br /> характер и не является публичной офертой, определяемой положениями<br /> Статьи 437 Гражданского кодекса РФ.</p>
-            <p className='p_footer'>(с) 2024 “Эх, прокачу!” - аренда автомобилей в Астрахани</p>
-            </div>
-            <div className="div_footer_right">
-            <div ><a href="https://yandex.ru/maps/org/drive_elit/31595452529/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Drive elit</a><a href="https://yandex.ru/maps/37/astrahan/category/electric_transport_store/66350561707/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Магазин электротранспорта в Астрахани</a>
-            <iframe className="map"></iframe></div>
-            <hr className='hr_footer1'/>
-            </div>
-        </footer>
+            <Footer/>
         </>
     );
 };
