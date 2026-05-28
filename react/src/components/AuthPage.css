@@ -1,0 +1,105 @@
+.img_auth{
+ background-image: url(/image/registration_img.png);
+ height: 52vw;
+ width: 36vw;
+ background-size: cover;
+}
+.a_register{
+    font-size: 4vw;
+  margin-top: 16vw;
+  position: absolute;
+  margin-left: 5vw;
+}
+.div_authPage{
+    display: flex;
+    gap: 8vw;
+}
+h1{
+    font-size: 2.5vw;
+    color: white;
+}
+.input_register{
+    font-size: 2vw;
+    background:none;
+    border:none;
+    outline: none;
+    border-bottom: 0.2vw  solid #9FB902;
+    width: 45vw;
+    color:white;
+}
+.registration_div{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+    justify-content: center;
+    
+    
+}
+.div_label_check{
+    display: flex;
+    align-items: center;
+}
+.check{
+    background-color: #3d3d3d;
+    width: 3vw;
+    height: 2vw;
+}
+.custom-button {
+    position: relative;
+    background: transparent; /* Чтобы убрать стандартный фон */
+    border: none; /* Убираем стандартные границы */
+    color: white; /* Цвет текста */
+    font-size: 1.5vw;
+    cursor: pointer;
+    padding: 1vw 1vw; /* Устанавливаем внутренние отступы */
+
+  }
+  
+  /* Левый половинный фон */
+  .custom-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 3vw;
+    width: 25%; /* Половина ширины */
+    height: 11%;
+    margin-left: 11.3vw;
+    background-color: #3D3D3D; /* Цвет первой половины */
+    transform: skewX(-40deg); /* Наклон влево */
+    z-index: -11;
+    border: 0.2vw solid #9FB902;
+  }
+  
+  /* Правый половинный фон */
+  .custom-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 11.3vw;
+    width: 25%; /* Половина ширины */
+    height: 100%;
+    background-color: #272626; /* Цвет второй половины */
+    transform: skewX(-40deg); /* Наклон вправо */
+    z-index: -1;
+  }
+  .custom-button span {
+    position: relative;
+    z-index: 2; /* Поверх фона */
+  }
+  
+.link_auth{
+    text-decoration:underline;
+}
+
+.div_form_class{
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  align-items: center;
+}
+.lab{
+  font-size: 1.7vw;
+  color: white;
+}

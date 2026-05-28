@@ -1,0 +1,724 @@
+@font-face {
+    font-family: 'Platypi';
+    src: url('/fonts/platypi/Platypi-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'Anticva';
+    src: url(/fonts/Anticva/Anticva-Regular.otf);
+}
+body{
+    background-color: #3D3D3D;
+}
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-family: "Platypi";
+    font-weight: 400;
+}
+p{
+    color: white;
+    font-size: 1.5vw;
+}
+.geo_div{
+    display: flex;
+    align-items: end;
+    gap: 1vw;
+}
+.header_div{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    align-items: center;
+}
+.map_geo{
+    width: 2vw;
+    height: 2.5vw;
+}
+.right_div{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+.logo{
+    width: 7vw;
+    height: 5vw;
+    margin-top: 1.5vw;
+}
+.block_one{
+    background-image: url(/image/banner.jpg);
+    height: 30vw;
+    background-size: cover;
+    margin-top: 3vw;
+}
+.gradient{
+    width: 100%;
+    position: relative;
+}
+.Loading{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 2vw;
+}
+.div_avto{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1vw;
+    padding-top: 3vw;
+}
+.div_car{
+display: flex;
+justify-content: space-between;
+padding-right: 5vw;
+padding-left: 5vw;
+
+flex-wrap: wrap;
+}
+
+.img_car{
+    width: 44vw;
+    height: 24vw;
+}
+.custom-button1 {
+    position: relative;
+    background: transparent; /* Чтобы убрать стандартный фон */
+    border: none; /* Убираем стандартные границы */
+    color: white; /* Цвет текста */
+    font-size: 1.5vw;
+    cursor: pointer;
+    padding: 1.2vw 1.2vw; /* Устанавливаем внутренние отступы */
+    margin-left: 30vw;
+    margin-top: 10vw;
+  }
+  
+  /* Левый половинный фон */
+
+  
+  /* Правый половинный фон */
+  .custom-button1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%; /* Половина ширины */
+    height: 100%;
+     /* Цвет второй половины */
+    background-color: #3D3D3D;
+    transform: skewX(-40deg); /* Наклон вправо */
+    border: 0.2vw solid #9FB902;
+    z-index: -1;
+  }
+  .custom-button1 span {
+    position: relative;
+    z-index: 2; /* Поверх фона */
+  }
+.name_car{
+    font-size: 2vw;
+    color: white;
+}
+.div_create_bid{
+   text-align: start;
+   padding-left: 5vw;
+   padding-right: 5vw;
+   padding-top: 3vw;
+   display: flex;
+   flex-direction: column;
+   gap: 1vw;
+}
+.name_car_id{
+    font-size: 2vw;
+}
+.form_bid{
+    display: flex;
+    gap: 3vw;
+    padding-bottom: 10vw;
+}
+.price_car_id{
+    font-size: 1.5vw;
+    color: white;
+}
+.div_form_bid{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.block_one_main{
+    background-image: url(/image/back_main_page.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+.div_left{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+.div_block_one_block{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    align-items: start;
+    padding-left: 5vw;
+    margin-top: 5vw;
+    gap: 3vw;
+}
+.hr_one{
+    width: 5vw;
+    border: 0.2vw solid #9FB902;
+}
+.hr_two{
+    width: 30vw;
+    border: 0.2vw solid #9FB902;
+}
+.sp{
+    font-size: 3vw;
+}
+.h1_span{
+    font-size: 6vw;
+    font-family: 'Anticva';
+}
+p{
+    font-family: 'Platypi';
+}
+.custom-button {
+    position: relative;
+    background: transparent; /* Чтобы убрать стандартный фон */
+    border: none; /* Убираем стандартные границы */
+    color: white; /* Цвет текста */
+    font-size: 1.5vw;
+    cursor: pointer;
+    padding: 1vw 1vw; /* Устанавливаем внутренние отступы */
+
+  }
+  
+  /* Левый половинный фон */
+  .custom-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-bottom: 3vw;
+    width: 25%; /* Половина ширины */
+    height: 11%;
+    margin-left: 11.3vw;
+    background-color: #3D3D3D; /* Цвет первой половины */
+    transform: skewX(-40deg); /* Наклон влево */
+    z-index: -11;
+    border: 0.2vw solid #9FB902;
+  }
+  
+  /* Правый половинный фон */
+  .custom-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 11.3vw;
+    width: 25%; /* Половина ширины */
+    height: 100%;
+    background-color: #272626; /* Цвет второй половины */
+    transform: skewX(-40deg); /* Наклон вправо */
+    z-index: -1;
+  }
+  .custom-button span {
+    position: relative;
+    z-index: 2; /* Поверх фона */
+  }
+.block_two_main{
+    height: 100vh;
+}
+.button_main{
+    width: 20vw;
+}
+.div_main_two{
+    display: flex;
+    gap: 2vw;
+}
+.img_left{
+    width: 65vw;
+}
+.block_two_main{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title_block_two{
+    font-size: 4vw;
+    font-family: 'Anticva';
+    padding-bottom: 3vw;
+}
+.div_center_left{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.div_left_main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8vw;
+}
+.block_three_main{
+    height: 100vh;
+}
+.div_one_one{
+    display: flex;
+
+}
+.div_1{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 2vw;
+    padding: 2vw;
+    background-color: #272626;
+}
+.div_2{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    gap: 2vw;
+    padding: 2vw;
+}
+h1{
+    font-family: 'Anticva';
+}
+.title_three{
+    font-size: 4vw;
+}
+.title_four{
+    font-size: 1.5vw;
+
+}
+.div_3{
+
+    background-color: white;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 20vw;
+}
+.p_3{
+    color: black;
+
+}
+.div_4{
+    width: 50vw;
+    background-image: url(/image/back_three.jpg);
+    background-size: contain;
+    
+}
+.div_two_two{
+    display: flex;
+}
+.div_5{
+    width: 50vw;
+    background-image: url(/image/back_four.jpg);
+    background-size: cover;
+}
+.div_three_three{
+    display: flex;
+}
+.div_6{
+    background-color: white;
+    display: flex;
+    text-align: end;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 20vw;
+}
+footer{
+    display: flex;
+    padding-left: 5vw;
+    
+
+}
+.div_pol{
+    display: flex;
+    gap: 3vw;
+}
+.div_footer_left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    width: 70vw;
+    gap: 2vw;
+}
+.hr_footer{
+    border: 0.2vw solid #9FB902;
+    width: 30vw;
+}
+.div_footer_right{
+ 
+    width: 30vw;
+    padding-right: 5vw;
+    padding-top: 5vw;
+    padding-bottom: 6vw;
+   display: flex;
+   flex-direction: column;
+   align-items: end;
+   gap: 3vw;
+   justify-content: end;
+}
+.map{
+    width: 45vw;
+    height: 50vh;
+    margin-left: -10vw;
+}
+.hr_footer1{
+    border: 0.2vw solid #9FB902;
+    width: 20vw;
+    
+}
+.title_footer{
+    font-size: 2vw;
+}
+.p_footer{
+    font-size: 1.2vw;
+}
+.div_docs{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.div_user{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.div_contacts{
+    padding-top: 3vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+}
+.block_two{
+    padding-bottom: 5vw;
+
+}
+.button_log_out{
+    font-family: 'Platypi';
+    background:none;
+    border: none;
+    color: white;
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+.div_avto{
+    padding-top: 5vw;
+}
+.hr_bid{
+    border: 1px solid #9FB902;
+}
+.form_bid{
+    display: flex;
+    padding-left: 5vw;
+    padding-top: 5vw;
+  
+    text-align: start;
+}
+.data{
+    height: 2vw;
+    width: 20vw;
+}
+
+.custom-button2 {
+    position: relative;
+    background: transparent; /* Чтобы убрать стандартный фон */
+    border: none; /* Убираем стандартные границы */
+    color: white; /* Цвет текста */
+    font-size: 1.5vw;
+    cursor: pointer;
+    padding: 1.2vw 1.2vw; /* Устанавливаем внутренние отступы */
+    margin-left: 3vw;
+    margin-top: 2vw;
+  }
+  
+  /* Левый половинный фон */
+
+  
+  /* Правый половинный фон */
+  .custom-button2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 100%; /* Половина ширины */
+    height: 100%;
+     /* Цвет второй половины */
+    background-color: #3D3D3D;
+    transform: skewX(-40deg); /* Наклон вправо */
+    border: 0.2vw solid #9FB902;
+    z-index: -1;
+  }
+  .custom-button2 span {
+    position: relative;
+    z-index: 2; /* Поверх фона */
+  }
+  .bookings{
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+  .hr_booking{
+    border: 1px solid #9FB902;
+
+  }
+  .div_top_booking{
+    text-align: start;
+    padding-top: 5vw;
+  }
+  .title_booking{
+    font-size: 3vw;
+    padding-bottom: 2vw;
+  }
+  .booking_img{
+    display: flex;
+    align-items: center;
+    text-align: start;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    gap: 2vw;
+  }
+  .p_booking{
+    font-size: 2vw;
+  }
+  .div_txt_booking{
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+  }
+.button_prodol{
+    width: 20vw;
+}
+.p_bottom_prodol{
+    font-size: 3vw;
+}
+.div_bottom_hr_booking{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 5vw;
+    padding-top: 3vw;
+    gap: 2vw;
+    padding-bottom: 5vw;
+}
+.div_top_header{
+    display: flex;
+    align-items: center;
+    gap: 3vw;
+}
+.bookings1{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vw;
+}
+.privacy-policy {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.policy-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Декоративный элемент */
+.policy-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #9FB902, #764ba2);
+}
+
+.policy-header {
+  padding: 40px 40px 20px;
+  text-align: center;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.policy-header h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.policy-date {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.policy-section {
+  padding: 30px 40px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.policy-section:last-child {
+  border-bottom: none;
+}
+
+.policy-section h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.policy-section h2::before {
+  content: '';
+  width: 6px;
+  height: 24px;
+  background: #9FB902;
+  border-radius: 3px;
+}
+
+.policy-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.policy-list li {
+  position: relative;
+  padding: 8px 0 8px 25px;
+  margin-bottom: 8px;
+}
+
+.policy-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #9FB902;
+  font-weight: bold;
+}
+
+.important-note {
+  background: #fff8e1;
+  padding: 15px 20px;
+  border-left: 4px solid #ffc107;
+  border-radius: 0 4px 4px 0;
+  margin: 20px 0;
+  font-style: italic;
+  color: #e67e22;
+}
+
+.note {
+  background: #e8f5e9;
+  padding: 12px 18px;
+  border-radius: 4px;
+  margin: 15px 0;
+  color: #9FB902;
+  border: 1px solid #c8e6c9;
+}
+
+.contact-info {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.contact-info h3 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.contact-info a {
+  color: #667eea;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* Стили для ссылок в тексте */
+.policy-section a {
+  color: #9FB902;
+  text-decoration: none;
+  border-bottom: 1px dashed #667eea;
+  transition: all 0.3s ease;
+}
+
+.policy-section a:hover {
+  color: #9FB902;
+  border-bottom-color: #9FB902;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .policy-container {
+    border-radius: 12px;
+    margin: 10px;
+  }
+  
+  .policy-header,
+  .policy-section {
+    padding: 25px 20px;
+  }
+  
+  .policy-header h1 {
+    font-size: 2rem;
+  }
+  
+  .policy-section h2 {
+    font-size: 1.3rem;
+  }
+  
+  .policy-list li {
+    padding-left: 20px;
+  }
+  
+  .privacy-policy {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .policy-header h1 {
+    font-size: 1.7rem;
+  }
+  
+  .policy-section h2 {
+    font-size: 1.1rem;
+  }
+  
+  .policy-list li {
+    font-size: 0.95rem;
+  }
+}

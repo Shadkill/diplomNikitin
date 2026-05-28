@@ -1,0 +1,110 @@
+.block_t{
+    display: flex;
+    gap: 3vw;
+   align-items: center;
+}
+.inp_val{
+    width: 15vw;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-family: 'Anticva';
+}
+.butAprove{
+    border: 1px solid #9FB902;
+    padding: 7px;
+    font-family: 'Platypi';
+    border-radius: 30px;
+    cursor: pointer;
+}
+.butReject{
+    border: 1px solid #9FB902;
+    padding: 7px;
+    font-family: 'Platypi';
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+}
+.block_two h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* Стили для таблицы пользователей */
+.user-table {
+  width: 80%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  margin-left: 10vw ;
+}
+
+.user-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  
+}
+
+.user-table th {
+  padding: 16px 12px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.user-table tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+  transition: background-color 0.3s ease;
+}
+
+.user-table tbody tr:hover {
+  background-color: #f8f9fa;
+}
+
+.user-table td {
+  padding: 14px 12px;
+  color: #555;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.no-data {
+  text-align: left;
+  padding: 30px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Стили для кнопки удаления */
+.delete-btn {
+  background: #ff4757;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.delete-btn:hover {
+  background: #ff3742;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 71, 87, 0.3);
+}
+
+.delete-btn:active {
+  transform: translateY(0);
+}
