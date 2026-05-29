@@ -108,3 +108,144 @@
 .delete-btn:active {
   transform: translateY(0);
 }
+/* ==========================================================================
+   АДАПТИВ ДЛЯ АДМИН-ПАНЕЛИ И ТАБЛИЦ ПОЛЬЗОВАТЕЛЕЙ
+   ========================================================================== */
+
+/* --- СРЕДНИЕ ЭКРАНЫ И ПЛАНШЕТЫ (Max-Width: 1024px) --- */
+@media (max-width: 1024px) {
+    .user-table {
+        width: 95%;        /* Расширяем таблицу, чтобы использовать полезную площадь */
+        margin-left: auto; /* Центрируем без жестких vw-отступов */
+        margin-right: auto;
+    }
+
+    .inp_val {
+        width: 25vw;       /* Увеличиваем ширину инпута, чтобы текст не обрезался */
+    }
+}
+
+/* --- ПОЛНАЯ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Max-Width: 768px) --- */
+@media (max-width: 768px) {
+    
+    /* 1. Адаптация блока управления (.block_t) и инпутов */
+    .block_t {
+        flex-direction: column; /* Выстраиваем инпуты и кнопки вертикально */
+        align-items: stretch;   /* Растягиваем элементы на всю ширину */
+        gap: 15px;
+        padding: 0 4vw;
+    }
+
+    .inp_val {
+        width: 100%;            /* Инпут на всю ширину */
+        height: 45px;
+        font-size: 16px;        /* Защита от авто-зума на iOS */
+        padding: 10px;
+    }
+
+    /* Увеличиваем хитбоксы для кнопок подтверждения/отклонения */
+    .butAprove, .butReject {
+        padding: 12px;
+        font-size: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* 2. ТРАНСФОРМАЦИЯ ТАБЛИЦЫ В КАРТОЧКИ (CSS-Магия) */
+    .user-table {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        background: transparent;  /* Убираем общий белый фон таблицы */
+        box-shadow: none;
+        overflow: visible;
+    }
+
+    /* Скрываем заголовки таблицы (thead), на смартфонах они только занимают место */
+    .user-table thead {
+        display: none;
+    }
+
+    /* Превращаем саму таблицу, её тело и строки в блочные элементы */
+    .user-table, 
+    .user-table tbody, 
+    .user-table tr {
+        display: block;
+    }
+
+    /* Каждая строка таблицы теперь выглядит как отдельная белая карточка */
+    .user-table tbody tr {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-bottom: none;
+    }
+
+    .user-table tbody tr:hover {
+        background-color: white; /* Отключаем десктопный hover-эффект строки */
+    }
+
+    /* Превращаем каждую ячейку (td) в строку внутри карточки */
+    .user-table td {
+        display: flex;
+        justify-content: space-between; /* Название колонки слева, данные — справа */
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px dashed #eee; /* Разделитель между свойствами */
+        font-size: 14px;
+    }
+
+    /* Убираем нижний разделитель у последней ячейки в карточке */
+    .user-table td:last-child {
+        border-bottom: none;
+        padding-top: 15px;
+    }
+
+    /* Генерируем псевдо-заголовки слева с помощью атрибута data-label.
+       Чтобы это работало, добавь в HTML к каждой td атрибут, например: <td data-label="Имя">Иван</td>
+    */
+    .user-table td::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: #764ba2; /* Подсвечиваем фиолетовым из твоего градиента */
+        font-size: 14px;
+        padding-right: 15px;
+    }
+
+    /* Если данных нет */
+    .no-data {
+        text-align: center;
+        background: white;
+        border-radius: 12px;
+        padding: 30px;
+    }
+
+    /* 3. Кнопка удаления */
+    .delete-btn {
+        width: 100%;            /* Кнопка удаления внутри карточки встает на всю ширину */
+        justify-content: center;
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+/* --- МАЛЕНЬКИЕ СМАРТФОНЫ (Max-Width: 480px) --- */
+@media (max-width: 480px) {
+    .block_two h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Делаем flex-строку вертикальной, если текст внутри ячеек слишком длинный */
+    .user-table td {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .user-table td::before {
+        padding-right: 0;
+    }
+}

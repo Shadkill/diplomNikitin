@@ -2,6 +2,7 @@
 import {Link,useNavigate} from 'react-router-dom';
 import { useState } from 'react';
 import './AuthPage.css'
+import toast from 'react-hot-toast'
 const Register = () => {
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
@@ -26,6 +27,7 @@ const handleSubmit = async (e) => {
       localStorage.setItem('token', token);
             
       console.log(data);
+      toast.success('Добро пожаловать!')
       navigate('/'); // переходим на главную страницу после успешной авторизации
     }else{
       console.error('Ошибка при отправке запроса:', response.statusText); // выводим ошибку в консоль для дебага

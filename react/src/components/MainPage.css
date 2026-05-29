@@ -969,3 +969,293 @@ footer{
   padding: 2vw;
   margin-bottom: 2vw;
 }
+/* ==========================================================================
+   АДАПТИВНАЯ ГРАФИКА И СЕТКА ДЛЯ ПЛАНШЕТОВ (Max-Width: 1024px)
+   ========================================================================== */
+@media (max-width: 1024px) {
+    p, a, .price_car_id, .button_log_out {
+        font-size: 2.2vw;
+    }
+
+    /* Шапка сайта */
+    .header_div {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .logo {
+        width: 12vw;
+        height: auto;
+    }
+    .map_geo {
+        width: 3.5vw;
+        height: auto;
+    }
+
+    /* Карточки машин */
+    .img_car {
+        width: 100%; /* Перестраиваем в одну колонку на планшетах */
+        height: auto;
+    }
+    .name_car {
+        font-size: 3.5vw;
+    }
+
+    /* Формы и кнопки */
+    .form_bid {
+        flex-direction: column;
+        gap: 4vw;
+    }
+    .data {
+        width: 60vw;
+        height: 5vw;
+    }
+    .custom-button, .custom-button1, .custom-button2 {
+        font-size: 2.5vw;
+        padding: 1.5vw 2.5vw;
+        margin-left: 0 !important; /* Сбрасываем жесткие отступы */
+    }
+
+    /* Секции главной страницы */
+    .div_main_two {
+        flex-direction: column;
+    }
+    .img_left {
+        width: 100%;
+    }
+    .block_one_main, .block_two_main, .block_three_main {
+        height: auto;
+        padding-top: 8vw;
+        padding-bottom: 8vw;
+    }
+    
+    /* Шахматный блок (div_1, div_2...) */
+    .div_one_one, .div_two_two, .div_three_three {
+        flex-direction: column;
+    }
+    .div_1, .div_2, .div_3, .div_4, .div_5, .div_6 {
+        width: 100%;
+        height: auto;
+        padding: 6vw 4vw;
+    }
+
+    /* Комментарии */
+    .comments-title-block h2 { font-size: 4vw; }
+    .comment-textarea { font-size: 2.2vw; }
+    .comment-btn { font-size: 2.2vw; }
+    .comment-card { padding: 3vw; }
+    .comment-avatar { width: 6vw; height: 6vw; font-size: 2.5vw; }
+    .comment-username { font-size: 2.8vw; }
+    .comment-text { font-size: 2.4vw; }
+}
+
+/* ==========================================================================
+   ПОЛНАЯ МОБИЛЬНАЯ ОПТИМИЗАЦИЯ (Max-Width: 768px)
+   ========================================================================== */
+@media (max-width: 768px) {
+    /* Переходим на фиксированные и rem единицы, чтобы текст не размывался */
+    p {
+        font-size: 15px !important;
+        line-height: 1.5;
+    }
+    
+    a {
+        font-size: 16px !important;
+    }
+
+    /* Шапка Drive Go */
+    .header_div {
+        flex-direction: column;
+        gap: 4sivh;
+        padding: 4vw;
+        text-align: center;
+    }
+    .right_div {
+        flex-direction: column;
+        gap: 4vw;
+        width: 100%;
+    }
+    .logo {
+        width: 25vw;
+        margin-top: 0;
+    }
+    .geo_div {
+        align-items: center;
+        justify-content: center;
+    }
+    .map_geo {
+        width: 6vw;
+    }
+
+    /* Главный баннер */
+    .block_one_main {
+        height: 85vh;
+    }
+    .h1_span {
+        font-size: 10vw; /* Крупный авто-заголовок */
+    }
+    .sp {
+        font-size: 6vw;
+    }
+    .div_block_one_block {
+        padding-left: 6vw;
+        margin-top: 15vh;
+    }
+    .hr_two {
+        width: 60vw;
+    }
+
+    /* Кнопки с наклоном (skewX) */
+    .custom-button1, .custom-button2, .comment-btn {
+        font-size: 16px !important;
+        padding: 12px 24px !important;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    .custom-button1::before, .custom-button2::before, .comment-btn::before {
+        transform: skewX(-15deg); /* Уменьшаем наклон на мобильных, чтобы не резать текст */
+    }
+
+    /* Выбор автомобиля */
+    .div_car {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .img_car {
+        width: 100%;
+        height: auto;
+        margin-bottom: 2vw;
+    }
+    .name_car {
+        font-size: 20px;
+    }
+
+    /* Форма бронирования */
+    .div_create_bid {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+    .form_bid {
+        padding-bottom: 15vw;
+    }
+    .data {
+        width: 100%;
+        height: 45px;
+        font-size: 16px;
+    }
+    .price_car_id {
+        font-size: 18px;
+    }
+
+    /* Блок комментариев */
+    .comments-block {
+        padding: 6vw 4vw;
+    }
+    .comments-title-block h2 {
+        font-size: 24px;
+    }
+    .comment-form {
+        gap: 4vw;
+    }
+    .comment-textarea {
+        font-size: 15px;
+        padding: 12px;
+    }
+    .comment-card {
+        flex-direction: column; /* Стек: аватар сверху, текст снизу */
+        gap: 3vw;
+        padding: 16px;
+    }
+    .comment-avatar {
+        width: 45px;
+        height: 45px;
+        min-width: 45px;
+        min-height: 45px;
+        font-size: 18px;
+    }
+    .comment-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 1vw;
+    }
+    .comment-username {
+        font-size: 16px;
+    }
+    .comment-date {
+        font-size: 12px;
+    }
+    .comment-text {
+        font-size: 14px;
+    }
+
+    /* Политика конфиденциальности */
+    .policy-container {
+        border-radius: 8px;
+        margin: 0;
+    }
+    .policy-header h1 {
+        font-size: 28px;
+    }
+    .policy-section {
+        padding: 20px;
+    }
+    .policy-section h2 {
+        font-size: 18px;
+    }
+    .policy-list li {
+        font-size: 14px;
+        padding-left: 20px;
+    }
+
+    /* Бронирования (История поездок) */
+    .booking_img {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4vw;
+    }
+    .title_booking {
+        font-size: 24px;
+    }
+    .p_booking {
+        font-size: 18px;
+    }
+
+    /* Футер */
+    footer {
+        flex-direction: column;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .div_footer_left, .div_footer_right {
+        width: 100%;
+        align-items: flex-start;
+        text-align: left;
+        padding-top: 8vw;
+        padding-bottom: 4vw;
+    }
+    .hr_footer, .hr_footer1 {
+        width: 50vw;
+    }
+    .title_footer {
+        font-size: 20px;
+    }
+    .p_footer {
+        font-size: 14px;
+    }
+    .map {
+        width: 100%;
+        height: 35vh;
+        margin-left: 0;
+        margin-top: 4vw;
+    }
+}
+
+/* Маленькие смартфоны */
+@media (max-width: 480px) {
+    .h1_span {
+        font-size: 12vw;
+    }
+    .custom-button1 {
+        margin-top: 5vw;
+    }
+}

@@ -9,6 +9,7 @@ const Comments = ({ carId }) => {
   const [loading, setLoading] = useState(true);
   const [userName, setUserName] = useState('');
  const [userId, setUserId] = useState('');
+ const role = localStorage.getItem('role')
   // Достаём имя пользователя из токена
    useEffect(() => {
     const token = localStorage.getItem('token');
@@ -165,14 +166,14 @@ const Comments = ({ carId }) => {
                   </span>
                 </div>
                 <p className="comment-text">{comment.content}</p>
-                {userName === comment.userId?.name && (
+                {role==='admin'? 
                   <button
                     onClick={() => handleDelete(comment._id)}
                     className="comment-delete-btn"
                   >
                     Удалить
                   </button>
-                )}
+                :<></>}
               </div>
             </div>
           ))

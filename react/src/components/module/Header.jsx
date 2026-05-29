@@ -1,10 +1,11 @@
 import { jwtDecode } from 'jwt-decode';
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 const Header = () => {
+    const navigate = useNavigate();
     const token = localStorage.getItem('token');//получаем данные из localStorage   
-        console.log('Token:', token); // Вывод токена в консоль
+        
         let role = '';//создаём переменную для хранения роли пользователя
         if (token) {//если извлекли токен
             const decodedToken = jwtDecode(token);//декодируем токен
@@ -13,7 +14,10 @@ const Header = () => {
        
         const handleLogout = () => {
             localStorage.removeItem('token'); // Удаление токена при выходе
-            window.location.reload(); // Перезагрузка страницы или перенаправление
+            
+             // Перезагрузка страницы или перенаправление
+            toast.success('Вы успешно вышли из аккаунта!')
+            navigate('/')
         };
     return (
         <>

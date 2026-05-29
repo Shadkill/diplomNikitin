@@ -15,6 +15,8 @@ import CarsUpdate from './components/AdminPanel/CarsUpdate';
 import UpdatePageCar from './components/AdminPanel/UpdatePageCar';
 import UpdatePageUser from './components/AdminPanel/UpdatePageUser';
 import PrivacyPolicy from './components/PrivacyPolicy';
+import RulesPage from './components/RulesPage';
+import NotFoundPage from './components/NotFoundPage';
 
 function App() {
 
@@ -38,6 +40,8 @@ function App() {
         
         <Route path='/admin/users' element={<ProtectedRoute><UpdatePageUser/></ProtectedRoute>}/>
         <Route path='/politika' element={<PrivacyPolicy/>}/>
+        <Route path='/rules' element={<RulesPage/>}/>
+        <Route path='*' element={<NotFoundPage/>}/>
       </Routes>
 
       <Toaster />
